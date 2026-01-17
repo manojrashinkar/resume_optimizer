@@ -1,0 +1,112 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+\usepackage{fontawesome}
+\usepackage[left=0.75in, right=0.75in, top=0.75in, bottom=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    menucolor=black,
+    urlbordercolor={1 1 1} % make URL border invisible
+}
+
+% Custom section formatting
+\titleformat{\section}{\Large\bfseries\scshape\RaggedRight}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1.5ex}{1ex} % Adjust spacing for sections
+
+% Define custom list environment for resume items
+\newenvironment{resitemize}{
+    \begin{itemize}[leftmargin=*, label=\textbullet, itemsep=0.25em, parsep=0em, partopsep=0em, topsep=0.25em]
+}{
+    \end{itemize}
+}
+
+% Define commands for consistent formatting
+\newcommand{\resitem}[1]{\item #1}
+\newcommand{\ressubheading}[4]{%
+    \vspace{0.5em}
+    \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill \textit{#4} \\
+    \vspace{-0.5em}
+}
+\newcommand{\resheading}[5]{%
+    \centering
+    {\fontsize{24pt}{28pt}\selectfont\textbf{#1}} \\
+    \vspace{2pt}
+    \faEnvelopeO \ \href{mailto:#2}{#2} \quad \faMobile \ #3 \quad \faLinkedin \ \href{#4}{LinkedIn} \quad \faMapMarker \ #5
+    \vspace{10pt}
+}
+
+\begin{document}
+\RaggedRight
+
+\resheading{MANISHA TIKARE}{manishatikare911@gmail.com}{+91 7338449656}{www.linkedin.com/in/manisha-tikare-2b5412247/}{Bangalore, India}
+
+\section*{Summary}
+Results-driven professional skilled in data extraction, analysis, and visualization, committed to identifying key insights and developing strategies to enhance efficiency and productivity. Possesses strong analytical and communication skills, with a foundational understanding of business operations and IT systems. Seeking to leverage technical expertise to drive organizational success as a Business Analyst.
+
+\section*{Experience}
+\ressubheading{HGS (Flipkart)}{July 2024 -- Present}{Customer Service Executive}{Bangalore}
+\begin{resitemize}
+    \resitem{Analyzed customer feedback to identify key trends and pain points, informing strategic improvements to the Flipkart shopping experience.}
+    \resitem{Conducted Root Cause Analysis (RCA) to diagnose and resolve recurring operational issues effectively, improving service recovery.}
+    \resitem{Collaborated with cross-functional teams to enhance customer interaction management and provide data-driven support.}
+\end{resitemize}
+
+\ressubheading{InData Ai}{November 2022 -- December 2022}{Data Science Intern}{Hubli}
+\begin{resitemize}
+    \resitem{Employed advanced Machine Learning algorithms for accurate Flight Price Prediction, optimizing booking times and improving travel planning.}
+    \resitem{Leveraged insightful data analysis to uncover key patterns and inform strategic decisions, enhancing efficiency and productivity.}
+\end{resitemize}
+
+\section*{Skills}
+\begin{resitemize}
+    \resitem{\textbf{Programming Languages:} Python, SQL, C, C++, Java}
+    \resitem{\textbf{Data Analysis \& Visualization:} Pandas, NumPy, Tableau, Power BI, Descriptive Statistics, Data Storytelling, Excel}
+    \resitem{\textbf{Machine Learning:} Predictive Modeling, ML Algorithms, Computer Vision}
+    \resitem{\textbf{Business Tools:} Root Cause Analysis (RCA), Business Process Analysis, Strategy Development}
+    \resitem{\textbf{Web Technologies:} HTML, CSS, JavaScript, Bootstrap}
+\end{resitemize}
+
+\section*{Projects}
+\ressubheading{Flight Price Prediction using ML}{}{Python, Machine Learning, Data Analysis}{}
+\begin{resitemize}
+    \resitem{Designed and implemented a Flight Price Prediction system using Machine Learning, providing accurate forecasts to inform travel decisions.}
+    \resitem{Utilized advanced algorithms to analyze historical data, predict optimal booking times, and enhance the efficiency of travel planning.}
+\end{resitemize}
+
+\ressubheading{Gesture Analysis System}{}{Python, Computer Vision, Machine Learning}{}
+\begin{resitemize}
+    \resitem{Developed a Gesture Analysis system using Python, enabling real-time recognition and interpretation of hand movements.}
+    \resitem{Implemented computer vision techniques and machine learning algorithms to create interactive interfaces based on gesture inputs.}
+\end{resitemize}
+
+\ressubheading{Sign Language Recognition using ML}{}{Python, Machine Learning, Data Interpretation}{}
+\begin{resitemize}
+    \resitem{Implemented a Sign Language Recognition system using Machine Learning to interpret hand gestures into meaningful text.}
+    \resitem{Utilized advanced ML algorithms for accurate recognition, bridging communication gaps and demonstrating inclusive technology solutions.}
+\end{resitemize}
+
+\ressubheading{Web Platform for Aptitude Assessment}{}{HTML, CSS, JavaScript}{}
+\begin{resitemize}
+    \resitem{Developed a dynamic web platform for aptitude assessments, ensuring a seamless user experience with responsive design and interactive elements.}
+\end{resitemize}
+
+\section*{Education}
+\ressubheading{Master of Computer Application (MCA)}{2023}{KLE Institute of Technology MCA}{Hubli, India}
+\ressubheading{Bachelor of Computer Application (BCA)}{}{CSI College}{Dharwad, India}
+
+\section*{Certifications}
+\begin{resitemize}
+    \resitem{Python Basic}
+    \resitem{Java Programming by Simplilearn}
+    \resitem{Excel Basic with Certification}
+\end{resitemize}
+
+\end{document}
